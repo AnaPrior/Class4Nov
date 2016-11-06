@@ -1,0 +1,295 @@
+cd .. 
+cd dsc/Repositories
+git clone https://github.com/AnaPrior/Master2016.git --> copy repo from github
+ll --> check it is there
+git clone https://github.com/AnaPrior/Master2016.git otronombre
+ll
+cd Master2016
+kwrite readme.txt
+ll
+cat readme.txt
+git add readme.txt --> now this doc will be tracked
+git status --> 
+git diff --> shows you changes since last commit
+git commit --> confirm and ready to push docs
+touch file2.txt
+git add file2.txt
+git commit
+vi file2.txt
+echo $GIT_EDITOR --> I cannot get it to work
+git log --> what you've been up to
+cd 
+cat .gitconfig 
+cd ..
+kwrite file.txt
+cd dsc/test
+kwrite file.txt
+cat file.txt
+rm file.txt
+ll
+cd ..
+cd Repositories/Master2016
+git status
+git log
+git status
+git push -u origin master
+get .git/config
+cat .git/config
+less .git/config
+cd ..
+mkdir master2
+cd master2
+echo "My name is not important" > README.txt
+less README.txt
+git init
+ll -a
+rm -rf .git
+git init
+git add README.txt
+git status
+cd ..
+cd 
+cd ..
+ll
+ll -a
+cd dsc/
+ll -a 
+cd ./git
+cd Repositories/master2
+git commit -m "This is init commit"
+git log
+git remote add origin https://github.com/AnaPrior/other_repo.git
+cd ..
+git push -u origin master --> it is ok if you have changed dir?
+git remote add origin https://github.com/AnaPrior/other_repo.git
+git push -u origin master --> about to try this
+cd master2
+git remote add origin https://github.com/AnaPrior/other_repo.git
+git push -u origin master
+git remote add origin https://github.com/AnaPrior/other_repo.git
+ll
+cd ..
+ll
+rmdir otronombre
+rm -r otronombre
+cd
+cd ..
+ll -a
+cd
+rm -rf .git/
+ll
+cd ..
+ll
+cd 
+cd Repositories
+cd ..
+git 
+git clone https://github.com/AnaPrior/other_repo.git
+ll -a
+ll
+rmdir other_repo
+rm -r other_repo
+cd Repositories
+ll
+git clone https://github.com/AnaPrior/other_repo.git
+ll
+cd other_repo
+cd 
+cd Repositories/other_repo
+cd ..
+rm -r other_repo
+cd master2
+ll
+git status
+git log
+git clone https://github.com/AnaPrior/other_repo.git
+git remote add origin https://github.com/AnaPrior/other_repo.git
+ll
+rm -r other_repo
+cd ..
+git remote add origin https://github.com/AnaPrior/other_repo.git
+cd master2
+cd ..
+curl -u 'AnaPrior' https://api.github.com/user/repos -d '{"name":"four"}' git clone https://github.com/AnaPrior/four.git
+curl -u 'AnaPrior' https://api.github.com/user/repos -d '{"name":"four"}' 
+git clone https://github.com/AnaPrior/four.git
+ll
+cd four
+git status
+kwrite readme.txt
+git status
+git add readme.txt
+git status
+touch a 
+touch b
+ll
+git status
+git add a
+git add b
+git log
+git status
+ll
+touch no_me_interesa
+ll
+git status
+git commit -m "inital commit"
+git ls-files
+kwrite .gitignore
+less .gitignore
+kwrite .gitignore
+cat .gitignore
+touch memememememe.yy
+ll
+git status
+kwrite .gitignore
+git status
+cd ..
+cd Master2016
+git branch bug/1
+git branch
+ git checkout bug/1
+git checkout -b bug/2
+git branch -m bug/1 bug/5
+git branch
+kwrite a
+ll
+kwrite a
+touch b
+ll
+kwrite b
+git status
+git add a
+git add b
+kwrite a
+git commit -m "this is my first commit in another branch"
+git checkout master
+git status
+git commit a
+git checkout master
+ll
+git push -u origin bug/2
+git branch -d bug/5
+git branch
+git checkout -b bug/10
+ll
+touch a
+touch b
+kwrite b
+git add b
+git add a
+git status
+git add -u
+kwrite a
+kwrite b
+git add -u
+git commit -m "nother branch"
+git push -u origin bug/10
+git branch
+git checkout master
+ll
+git log
+touch a
+kwrite a
+git add a
+kwrite a 
+git commit -m "This is master one"
+git log
+git add b
+ll
+git add -u
+git commit -m "master one second commit"
+ll -a
+git push -u master
+git push -u origin master
+git checkout bug/10
+git log
+less b
+git merge master
+git status
+git commit 
+git commit a
+git add -u
+git commit
+less a
+less b
+less a
+git checkout master
+ll
+kwrite my_last_file.txt
+ll
+git add my_last_file.txt
+git rm --cached my_last_file.txt
+git add my_last_file.txt
+git commit
+git reset origin/master
+git add my_last_file.txt
+git commit my_last_file.txt
+git push -u origin master
+rm my_last_file.txt
+git checkout my_last_file.txt
+ll
+git mv my_last_file.txt my_very_last_file.txt
+ll
+git commit -m "changed name"
+git push -u origin master
+cd 
+seq 10
+seq 1 2 10
+seq 1 2 10> uniq_example.txt
+seq 1 2 10>> uniq_example.txt
+cat uniq_example.txt
+rm uniq_example.txt
+seq 1 2 10 > uniq_example.txt
+seq 1 10>> uniq_example.txt
+cat uniq_example.txt
+sort uniq_example.txt
+sort uniq_example.txt|uniq
+sort -u uniq_example.txt
+sort uniq_example.txt|uniq -c
+sort -n uniq_example.txt
+sort -n -r uniq_example.txt
+cd Data/opentraveldata
+ll
+head optd_aircraft.csv 
+sort -t "^" -k 7r,7  optd_aircraft.csv| head  
+head optd_aircraft.csv
+sort -t "^" -k 2,2 -u optd_aircraft.csv | wc -l
+cd
+find -size |head 
+cd -
+find ~ -type f -size +10M -exec ls -sh {} \; | head | echo $(sort -n)
+find ~ -type f -size +10M -exec ls -sh {} \; | head | sort -n|echo
+find ~ -type f -size +10M -exec ls -sh {} \; | sort -nr | head
+find ~ -type f -size +10M -exec ls -sh {} \; | sort -hr | head
+find ~ -type f -size +10K -exec ls -sh {} \; | sort -hr | head
+seq 15 > 20lines.txt
+seq 9 1 20 >> 20lines.txt
+echo "20\n20">>20lines.txt
+ll
+rm 20lines.txt
+seq 15 > 20lines.txt; seq 9 1 20 >> 20lines.txt; echo "20\n20">>20lines.txt
+sort -n 20lines.txt 
+sort -u -n
+sort -un 20lines.txt
+sort -d 20lines.txt
+uniq -d 20lines.txt
+sort -n 20lines.txt| uniq -d 
+sort -n 20lines.txt| uniq -c
+sort -n 20lines.txt| uniq -d 
+sort -n 20lines.txt| uniq -c|sort -n| head -1
+sort -n 20lines.txt| uniq -c|sort -nr| head 1
+sort -n 20lines.txt| uniq -c|sort -nr| head -n 1
+sort -n 20lines.txt| uniq -c|sort -nr
+sort -n 20lines.txt| uniq -c|sort -n
+seq 0 2 40 > 20lines2.txt
+sort -n 20lines.txt 20lines2.txt | unique -c > merged_file.txt 
+sort -n 20lines.txt 20lines2.txt | uniqu -c > merged_file.txt 
+sort -n 20lines.txt 20lines2.txt | uniq -c > merged_file.txt 
+cat merged_file.txt
+sort -nu 20lines.txt 20lines2.txt > uniq20lines_file.txt 
+sort 20lines2.txt 20lines.txt| uniq -c 
+sort 20lines2.txt 20lines.txt| uniq -c | sort -k 2n,2
+sort -t "^" -k 7,7 -r optd_aircraft.csv| head -2
+$history -n 1000 > 11/04/2016.txt 
+history -n 1000 > 11/04/2016 commands.txt 
+history -n 1000 > 11/04/2016_commands.txt 
